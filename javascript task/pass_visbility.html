@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password visibility</title>
+    <style>
+        div{
+            /* height: 500px; */
+            width: 500px;
+            margin: 200px auto;
+            background-color: purple;
+            padding: 100px 50px;
+            border-radius: 32px;
+        }
+
+        input[type="password"],input[type="text"]{
+            width: 50%;
+            padding: 10px 10px;
+            outline: none;
+            font-size: 16px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <label for="psd">Enter Password:</label>
+        <input type="password" id="show" name="psd" ><br><br>
+
+        <label for="spw">Show Password:</label>
+        <input type="checkbox"  onclick="showPwd()" >
+
+    </div>
+
+    <script>
+        function showPwd(){
+            let show = document.getElementById('show');
+            if(show.type == 'text'){
+                show.type = 'password';
+            }
+            else{
+                show.type = 'text';
+            }
+        }
+    </script>
+</body>
+</html>
