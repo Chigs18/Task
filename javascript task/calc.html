@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      height: 300px;
+      width: 50%;
+      margin: 200px auto;
+      background-color: gray;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      border-radius: 40px;
+      
+    }
+    div p{
+      padding-top: 15px;
+    }
+    
+  </style>
+</head>
+
+<body>
+
+
+<div>
+
+  <p><span id="result"></span></p>
+</div>
+
+
+  <script>
+    
+    let num1 = prompt('Enrer value');
+    let num2 = prompt('Enrer value');
+
+    function result(param) {
+      return eval(parseInt(num1) + param + parseInt(num2));
+    }
+
+    let opration = ['+', '-', '*', '/', '%'];
+    let show = '';
+    opration.forEach(element => {
+      
+      let title = '';
+      if(element == '+'){
+        title = 'Addition:';
+      }else if(element == '-'){
+        title = 'Substraction is: ';
+      }
+      else if(element == '*'){
+        title = 'Multiplication is: ';
+      }
+      else if(element == '/'){
+        title = 'Division is: ';
+      }else if(element == '%'){
+        title = 'Modulo is: ';
+      }
+      show += title + result(element) + '</br>';
+    });
+    document.getElementById('result').innerHTML =  show;
+
+
+    // let show = document.getElementById('result').innerHTML = 'addition is:'+result();
+    // let show = document.getElementById('result').innerHTML = 'addition is:'+result();
+    // let show = document.getElementById('result').innerHTML = 'addition is:'+result();
+
+
+
+
+
+  </script>
+</body>
+
+</html>
