@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slider</title>
+  <link rel="stylesheet" href="Css/slider.css">
+</head>
+
+<body>
+
+
+
+  <div class="container">
+
+    <div class="mySlides">
+      <img src="image/slide1.jpg" style="width:100%">
+
+    </div>
+
+    <div class="mySlides">
+      <img src="image/slide2.jpg" style="width:100%">
+      
+    </div>
+
+    <div class="mySlides">
+      <img src="image/slide3.jpg" style="width:100%">
+      
+    </div>
+
+  </div>
+
+
+
+  <script>
+    let slide = 0;
+   
+    showSlides();
+
+    function showSlides() {
+      
+      let slides = document.getElementsByClassName("mySlides");
+      
+      
+      
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        
+      }
+      slide++;
+      
+   
+      
+
+      if (slide > slides.length) 
+      { 
+        slide = 1 
+      }
+
+      slides[slide - 1].style.display = "block";
+      
+      
+      setTimeout(showSlides, 2000); 
+    }
+  </script>
+</body>
+
+</html>
